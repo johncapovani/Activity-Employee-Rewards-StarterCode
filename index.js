@@ -25,19 +25,129 @@ let empYears = associateBanker[2];   //years employed
 // Continue same pattern/naming convention for each banker
 // leaving only one variable declaration section uncommented each 'Run'
 
-/* 
-let seniorBanker = [77227, 1, 2]
-let empId = seniorBanker[0]       
-let empChecking = seniorBanker[1]
-let empYears = seniorBanker[2];   
-*/
+
+// let seniorBanker = [77227, 1, 2]
+// let empId = seniorBanker[0]       
+// let empChecking = seniorBanker[1]
+// let empYears = seniorBanker[2];   
+
 
 
 //<--Your code goes here-->
+//When the employee has 1 year or less with the company: If the employee has 1 new checking account, 
+// output: 'Ship $50.00 Gift Card', otherwise output: 'Incentives not met'
+if (empYears == 1) {
+    if (empChecking >= 1) {
+        console.log("Ship $50.00 Amazon Gift Card")
+    }
+    else {
+        console.log("Incentives not met")
+    }
+}
 
+//When the employee has 2 years with the company: If the employee has 3+ new checking accounts,
+// output: 'Ship $400.00 Gift Card', otherwise output: 'Ship $100.00 Gift Card'
+else if (empYears == 2) {
+    if (empChecking >= 3) {
+        console.log("Ship $400.00 Visa Gift Card")
+    } else {
+
+        console.log("Ship $100.00 Visa Gift Card")
+
+    }
+
+}
+
+else if (empYears == 3) {
+
+    if (empChecking >= 2) {
+
+        console.log('Ship $700.00 Gift Card')
+
+    } else {
+
+        console.log('Ship $350.00 Gift Card')
+
+    }
+
+}
+
+else if (empYears >= 4) {
+
+    if (empChecking >= 1) {
+
+        console.log('Ship $3500.00 Gift Card')
+
+    } else {
+
+        console.log('Ship set of knives')
+
+    }
+
+}
 
 // Output when activity is complete
 console.log(`${empId}: Processed`)
 
-    
-   
+
+//Switch Statement appears to be pretty much the same amount of code?
+
+
+let yearsOfService = empYears
+
+switch (yearsOfService) {
+
+    case 1:
+
+        if (empChecking >= 1) {
+            console.log("Ship $50.00 Amazon Gift Card")
+        }
+        else {
+            console.log("Incentives not met")
+        }
+        break
+
+    case 2:
+        if (empChecking >= 3) {
+            console.log("Ship $400.00 Visa Gift Card")
+        } else {
+
+            console.log("Ship $100.00 Visa Gift Card")
+
+        }
+        break
+
+    case 3:
+
+
+        if (empChecking >= 2) {
+
+            console.log('Ship $700.00 Gift Card')
+
+        } else {
+
+            console.log('Ship $350.00 Gift Card')
+
+        }
+
+        break
+
+    case 4:
+
+        if (empChecking >= 1) {
+
+            console.log('Ship $3500.00 Gift Card')
+
+        } else {
+
+            console.log('Ship set of knives')
+
+        }
+
+        break
+}
+
+
+
+// Output when activity is complete
+console.log(`${empId}: Processed`)
